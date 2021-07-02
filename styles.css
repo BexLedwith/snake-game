@@ -12,6 +12,7 @@ body {
   text-align: center;
   background: lightskyblue;
   display: flex;
+  min-width: 600px;
 }
 
 aside {
@@ -26,6 +27,8 @@ aside {
 
 main {
   width: 75%;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -38,7 +41,7 @@ h5 {
 }
 
 p {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
 }
 
 span {
@@ -121,15 +124,14 @@ span {
   display: grid;
   grid-template-areas:
     ". a ."
-    "b . c"
-    ". d .";
+    "b c d";
   margin-top: 50px;
   margin-left: 10px;
 }
 
 .touch-arrows button {
-  margin: 3px;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  padding: 2px;
 }
 
 #up {
@@ -141,11 +143,11 @@ span {
 }
 
 #down {
-  grid-area: d;
+  grid-area: c;
 }
 
 #right {
-  grid-area: c;
+  grid-area: d;
 }
 
 button:hover,
