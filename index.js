@@ -30,6 +30,7 @@ createGrid();
 currentSnake.forEach((index) => squares[index].classList.add("snake"));
 
 function startGame() {
+  message.textContent = "";
   //remove the snake
   currentSnake.forEach((index) => squares[index].classList.remove("snake"));
   //remove the apple

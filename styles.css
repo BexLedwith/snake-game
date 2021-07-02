@@ -2,6 +2,8 @@ html,
 body {
   margin: 10;
   padding: 10;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 .grid {
@@ -10,6 +12,7 @@ body {
   border: solid 2px black;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .square {
@@ -23,4 +26,10 @@ body {
 
 .apple {
   background-color: red;
+  border-radius: 50%;
+}
+
+#message {
+  color: red;
+  font-weight: 900;
 }
