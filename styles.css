@@ -1,18 +1,27 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 10;
   padding: 10;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  background: white;
 }
 
 .grid {
-  width: 200px;
-  height: 200px; /*for 10 x 10 20px wide*/
+  width: 205px;
+  height: 205px; /*for 10 x 10 20px wide*/
   border: solid 2px black;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 0;
+  align-content: center;
 }
 
 .square {
@@ -22,11 +31,47 @@ body {
 
 .snake {
   background: green;
+  z-index: 1;
 }
 
+/* .square.apple {
+  
+} */
+
 .apple {
-  background-color: red;
+  background: #ff0000;
+  background: linear-gradient(#c23636, #801414, #640000);
+  width: 12px;
+  height: 12px;
+  margin: 4px;
+  position: relative;
+  top: 2px;
+  border: none;
+  border-radius: 35% 35% 41% 41% / 42% 42% 75% 75%;
+}
+
+.apple:before {
+  background: #613d03;
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  margin: -4.1px 0 0 -0.8px;
+  border-radius: 10px 0;
+  z-index: 5;
+}
+
+.apple:after {
+  background: white;
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  margin: 2px 0 0 4px;
   border-radius: 50%;
+  transform: rotate(-53deg);
+  z-index: 4;
+  box-shadow: 0 -7.5px 0 white, -10.5px 0.5px 0 white;
 }
 
 #message {
