@@ -12,7 +12,6 @@ body {
   text-align: center;
   background: lightskyblue;
   display: flex;
-  max-width: 600px;
 }
 
 aside {
@@ -153,4 +152,14 @@ span {
 button:hover,
 button:focus {
   border: 2px solid blue;
+}
+
+@media only screen and (max-width: 600px) {
+  aside {
+    display: none;
+  }
+  main {
+    width: 450px;
+    margin: 10px;
+  }
 }
