@@ -146,3 +146,8 @@ span {
 #right {
   grid-area: c;
 }
+
+button:hover,
+button:focus {
+  border: 2px solid blue;
+}
