@@ -120,13 +120,15 @@ span {
   display: grid;
   grid-template-areas:
     ". a ."
-    "b c d";
-  margin-top: 10px;
+    "b . c"
+    ". d .";
+  margin-top: 50px;
   margin-left: 10px;
 }
 
 .touch-arrows button {
-  margin: 2px;
+  margin: 3px;
+  font-size: 1.2rem;
 }
 
 #up {
@@ -138,9 +140,9 @@ span {
 }
 
 #down {
-  grid-area: c;
+  grid-area: d;
 }
 
 #right {
-  grid-area: d;
+  grid-area: c;
 }

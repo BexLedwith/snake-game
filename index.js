@@ -13,6 +13,10 @@ const speed = 0.9;
 let timerId = 0;
 const highScoreDisplay = document.getElementById("high-score");
 let highScore = 0;
+const upBtn = document.getElementById("up");
+const downBtn = document.getElementById("down");
+const leftBtn = document.getElementById("left");
+const rightBtn = document.getElementById("right");
 
 function createGrid() {
   //create 100 of these elements with a for loop
@@ -113,5 +117,18 @@ function control(e) {
     direction = +width;
   }
 }
+
 document.addEventListener("keydown", control);
 startButton.addEventListener("click", startGame);
+upBtn.addEventListener("click", function () {
+  direction = -width;
+});
+downBtn.addEventListener("click", function () {
+  direction = +width;
+});
+leftBtn.addEventListener("click", function () {
+  direction = -1;
+});
+rightBtn.addEventListener("click", function () {
+  direction = 1;
+});
