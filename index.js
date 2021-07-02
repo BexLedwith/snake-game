@@ -1,6 +1,7 @@
 const grid = document.querySelector(".grid");
 const startButton = document.getElementById("start");
 const scoreDisplay = document.getElementById("score");
+const message = document.getElementById("message");
 let squares = [];
 let currentSnake = [2, 1, 0];
 let direction = 1;
@@ -54,7 +55,7 @@ function move() {
     (currentSnake[0] - width < 0 && direction === -width) || //if snake has hit top
     squares[currentSnake[0] + direction].classList.contains("snake")
   )
-    return clearInterval(timerId);
+    return clearInterval(timerId), (message.textContent = "GAME OVER");
 
   //remove last element from our currentSnake array
   const tail = currentSnake.pop();
@@ -100,13 +101,13 @@ function generateApple() {
 // 40 is for the down arrow
 
 function control(e) {
-  if (e.key === "ArrowRight") {
+  if (e.key === "ArrowRight" || e.key === "d") {
     direction = 1;
-  } else if (e.key === "ArrowUp") {
+  } else if (e.key === "ArrowUp" || e.key === "w") {
     direction = -width;
-  } else if (e.key === "ArrowLeft") {
+  } else if (e.key === "ArrowLeft" || e.key === "a") {
     direction = -1;
-  } else if (e.key === "ArrowDown") {
+  } else if (e.key === "ArrowDown" || e.key === "s") {
     direction = +width;
   }
 }
