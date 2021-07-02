@@ -108,27 +108,43 @@ function generateApple() {
 
 function control(e) {
   if (e.key === "ArrowRight" || e.key === "d") {
-    direction = 1;
+    right();
   } else if (e.key === "ArrowUp" || e.key === "w") {
-    direction = -width;
+    up();
   } else if (e.key === "ArrowLeft" || e.key === "a") {
-    direction = -1;
+    left();
   } else if (e.key === "ArrowDown" || e.key === "s") {
-    direction = +width;
+    down();
   }
+}
+
+function right() {
+  direction = 1;
+}
+
+function left() {
+  direction = -1;
+}
+
+function up() {
+  direction = -width;
+}
+
+function down() {
+  direction = +width;
 }
 
 document.addEventListener("keydown", control);
 startButton.addEventListener("click", startGame);
 upBtn.addEventListener("click", function () {
-  direction = -width;
+  up();
 });
 downBtn.addEventListener("click", function () {
-  direction = +width;
+  down();
 });
 leftBtn.addEventListener("click", function () {
-  direction = -1;
+  left();
 });
 rightBtn.addEventListener("click", function () {
-  direction = 1;
+  right();
 });

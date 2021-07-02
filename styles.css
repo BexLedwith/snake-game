@@ -68,7 +68,7 @@ span {
 .snake {
   background: green;
   border-radius: 30%;
-  z-index: 10;
+  z-index: 6;
 }
 
 .head {
