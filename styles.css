@@ -10,7 +10,15 @@ body {
   padding: 10;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background: white;
+  background: lightpink;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+p {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
 
 .grid {
@@ -22,21 +30,22 @@ body {
   margin: 0 auto;
   padding: 0;
   align-content: center;
+  background: white;
 }
 
 .square {
   width: 20px;
   height: 20px;
 }
-
 .snake {
   background: green;
-  z-index: 1;
+  border-radius: 30%;
+  z-index: 10;
 }
 
-/* .square.apple {
-  
-} */
+.head {
+  border-radius: 50%;
+}
 
 .apple {
   background: #ff0000;
@@ -67,7 +76,7 @@ body {
   width: 4px;
   height: 4px;
   position: absolute;
-  margin: 2px 0 0 4px;
+  margin: 2.2px 0 0 4px;
   border-radius: 50%;
   transform: rotate(-53deg);
   z-index: 4;
