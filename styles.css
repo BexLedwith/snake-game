@@ -162,8 +162,4 @@ button:focus {
     width: 450px;
     margin: 10px;
   }
-
-  .touch-arrows button {
-    font-size: 1.2rem;
-  }
 }
