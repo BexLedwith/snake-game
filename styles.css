@@ -1,1 +1,19 @@
+html,
+body {
+  margin: 10;
+  padding: 10;
+}
 
+.grid {
+  width: 200px;
+  height: 200px; /*for 10 x 10 20px wide*/
+  border: solid 2px black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  background: blue;
+}
