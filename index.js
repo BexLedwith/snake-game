@@ -96,11 +96,6 @@ function generateApple() {
   squares[appleIndex].classList.add("apple");
 }
 
-// 39 is right arrow
-// 38 is for the up arrow
-// 37 is for the left arrow
-// 40 is for the down arrow
-
 function control(e) {
   if (e.key === "ArrowRight" || e.key === "d") {
     direction = 1;
