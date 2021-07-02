@@ -100,15 +100,15 @@ function generateApple() {
 // 40 is for the down arrow
 
 function control(e) {
-  if (e.keyCode === 39) {
+  if (e.key === "ArrowRight") {
     direction = 1;
-  } else if (e.keyCode === 38) {
+  } else if (e.key === "ArrowUp") {
     direction = -width;
-  } else if (e.keyCode === 37) {
+  } else if (e.key === "ArrowLeft") {
     direction = -1;
-  } else if (e.keyCode === 40) {
+  } else if (e.key === "ArrowDown") {
     direction = +width;
   }
 }
-document.addEventListener("keyup", control);
+document.addEventListener("keydown", control);
 startButton.addEventListener("click", startGame);
