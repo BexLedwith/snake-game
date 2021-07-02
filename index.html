@@ -8,17 +8,26 @@
     <title>Snake Game</title>
   </head>
   <body>
-    <h1>Snake Game</h1>
-    <h2 id="message"></h2>
-    <button id="start">Start/Restart</button>
-    <h2>Score: <span id="score"></span></h2>
-    <div class="grid"></div>
-    <h5>Directions:</h5>
-    <p>
-      Use arrow keys, WASD, or touch arrows on screen to move snake. Eat apples
-      to grow your snake and your score. Be careful not to run into a wall or
-      into yourself! Click the Start/Restart Button to start a new game.
-    </p>
+    <aside>
+      <h5>Directions:</h5>
+      <p>
+        Use arrow keys, WASD, or touch arrows on screen to move snake. Eat
+        apples to grow your snake and your score. Be careful not to run into a
+        wall or into yourself!
+      </p>
+      <p>Click the Start/Restart Button to start a new game.</p>
+
+      <h5 class="high-scores">High Scores:</h5>
+      <div id="high-scores"></div>
+    </aside>
+    <main>
+      <h1>Snake Game</h1>
+      <h2 id="message"></h2>
+      <button id="start">Start/Restart</button>
+      <h2>Score: <span id="score"></span></h2>
+      <div class="grid"></div>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>
