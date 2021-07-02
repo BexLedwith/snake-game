@@ -11,6 +11,8 @@ let score = 0;
 let intervalTime = 1000;
 const speed = 0.9;
 let timerId = 0;
+const highScoreDisplay = document.getElementById("high-score");
+let highScore = 0;
 
 function createGrid() {
   //create 100 of these elements with a for loop
@@ -57,7 +59,11 @@ function move() {
     squares[currentSnake[0] + direction].classList.contains("snake")
   )
     return clearInterval(timerId), (message.textContent = "GAME OVER");
-
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore);
+    highScoreDisplay.textContent = localStorage.getItem("highScore");
+  }
   //remove last element from our currentSnake array
   const tail = currentSnake.pop();
   //remove styling from last element

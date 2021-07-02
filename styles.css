@@ -16,9 +16,10 @@ body {
 
 aside {
   width: 25%;
-  margin-right: 0;
-  padding: 0;
+  margin: 50px 0 0 10px;
+  padding: 0 0 10px 0;
   background: linen;
+  height: fit-content;
 }
 
 main {
@@ -32,17 +33,9 @@ p {
   font-size: 0.6rem;
 }
 
-.high-scores {
-  background: yellow;
-  margin-bottom: 0;
-}
-
-#high-scores {
-  background: white;
-  height: 190px;
+#high {
+  display: inline-block;
   margin-top: 0;
-  padding: 5px;
-  border: 1px solid black;
 }
 
 .grid {
