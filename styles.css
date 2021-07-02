@@ -12,7 +12,7 @@ body {
   text-align: center;
   background: lightskyblue;
   display: flex;
-  min-width: 600px;
+  max-width: 600px;
 }
 
 aside {
